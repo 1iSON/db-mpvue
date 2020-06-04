@@ -8,7 +8,6 @@
       <open-data type="userProvince" lang="zh_CN"></open-data>-
       <open-data type="userCity" lang="zh_CN"></open-data>
     </div>
-    
     <ul class="container log-list">
       <li v-for="(log, index) in logs" :class="{ red: aa }" :key="index" class="log-item">
         <card :text="(index + 1) + ' . ' + log"></card>
@@ -16,22 +15,18 @@
     </ul>
   </div>
 </template>
-
 <script>
 import { formatTime } from '@/utils/index'
 import card from '@/components/card'
-
 export default {
   components: {
     card
   },
-
   data () {
     return {
       logs: []
     }
   },
-
   created () {
     let logs
     if (mpvuePlatform === 'my') {
@@ -44,7 +39,6 @@ export default {
   }
 }
 </script>
-
 <style>
 .user-info{
   display: flex;

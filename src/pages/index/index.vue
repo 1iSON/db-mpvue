@@ -91,7 +91,6 @@ export default {
   }
 }
 </script>
-
 <style scoped>
   /* 去除首页x轴滚动条 */
   ::-webkit-scrollbar{

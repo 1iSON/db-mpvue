@@ -6,21 +6,21 @@ import fly from './request'
  */
 export const loginMini = params => fly.post('/movie/user/login/loginMini', params)
 /**
- * 首页北京地區電影
+ * 首页北京地區电影
  * @param params
  * @returns {FlyPromise<any> | *}
  */
 export const nowShow = params => fly.get('/v2/movie/in_theaters', params)
 
 /**
- * 首页即將上映電影
+ * 首页即將上映电影
  * @param params
  * @returns {FlyPromise<any> | *}
  */
 export const upcomingMovie = params => fly.get('/v2/movie/coming_soon', params)
 
 /**
- * 首页新片榜電影
+ * 首页新片榜电影
  * @param params
  * @returns {FlyPromise<any> | *}
  */
