@@ -6,7 +6,7 @@ import fly from './request'
  */
 export const loginMini = params => fly.post('/movie/user/login/loginMini', params)
 /**
- * 首页北京地區电影
+ * 首页北京地区电影
  * @param params
  * @returns {FlyPromise<any> | *}
  */
@@ -44,3 +44,24 @@ export const detail = id => fly.get('/v2/movie/subject/' + id)
  * @returns {FlyPromise<any> | *}
  */
 export const search = inputValue => fly.get('/v2/movie/search/?q=' + inputValue)
+
+/**
+ * 电影本周口碑榜
+ * @param params
+ * @returns {FlyPromise<any> | *}
+ */
+export const weeks = params => fly.get('/v2/movie/weekly/?apikey=' + params)
+
+/**
+ * 北美票房榜
+ * @param params
+ * @returns {FlyPromise<any> | *}
+ */
+export const norths = params => fly.get('/v2/movie/us_box/?apikey=' + params)
+
+/**
+ * 新片榜
+ * @param params
+ * @returns {FlyPromise<any> | *}
+ */
+export const news = params => fly.get('/v2/movie/new_movies/?apikey=' + params)

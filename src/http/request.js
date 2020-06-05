@@ -14,7 +14,7 @@ fly.config.headers = {
 
 }
 // //设置超时
-fly.config.timeout = 10000
+fly.config.timeout = 15000
 
 // //设置请求基地址
 fly.config.baseURL = baseUrl
@@ -27,7 +27,7 @@ fly.interceptors.request.use((request) => {
   // wx.showNavigationBarLoading()
   // console.log('http请求参数======>>', request.body)
   wx.showLoading({
-    title: '加载中...'
+    title: ''
   })
   return request
 })

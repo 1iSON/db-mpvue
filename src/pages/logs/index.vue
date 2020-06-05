@@ -1,18 +1,24 @@
 <template>
   <div>
-    <open-data class="infoImg" type="userAvatarUrl"></open-data>
     <div class="user-info">
-      <open-data class="userinfo-nickname" type="userNickName"></open-data>
-      <open-data type="userGender" lang="zh_CN"></open-data>
-      <open-data type="userCountry" lang="zh_CN"></open-data>-
-      <open-data type="userProvince" lang="zh_CN"></open-data>-
-      <open-data type="userCity" lang="zh_CN"></open-data>
+      <div class="user-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </div>
+      <div class="user-area">
+        <open-data type="userNickName"></open-data>
+        <open-data type="userGender" lang="zh_CN"></open-data>
+        <open-data type="userCountry" lang="zh_CN"></open-data>-
+        <open-data type="userProvince" lang="zh_CN"></open-data>-
+        <open-data type="userCity" lang="zh_CN"></open-data>
+      </div>
     </div>
-    <ul class="container log-list">
-      <li v-for="(log, index) in logs" :class="{ red: aa }" :key="index" class="log-item">
-        <card :text="(index + 1) + ' . ' + log"></card>
-      </li>
-    </ul>
+    <div class="user-logs">
+      <ul class="container log-list">
+        <li v-for="(log, index) in logs" :class="{ red: aa }" :key="index" class="log-item">
+          <card :text="(index + 1) + ' . ' + log"></card>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 <script>
@@ -39,10 +45,19 @@ export default {
   }
 }
 </script>
-<style>
+<style scope>
 .user-info{
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.user-avatar{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.user-area{
+  margin-left: 10px;
 }
 image{
   width: 100%;
