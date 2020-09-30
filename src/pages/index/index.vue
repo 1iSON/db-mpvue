@@ -11,31 +11,31 @@
       </swiper>
     </div>
     <!--即将上映的电影-->
-    <div class="upcomingMovie">
-      <div class="upcomingMovie-area">{{soonData.title}}</div>
-      <div class="upcomingMovie-item">
-        <div class="upcomingMovie-list" v-for="(Item, index) in soonData.subjects" :key="index" @click="moviesDetail(Item)">
-          <div class="upcomingMovie-image">
+    <div class="coming-movie">
+      <div class="coming-movie-area">{{soonData.title}}</div>
+      <div class="coming-movie-item">
+        <div class="coming-movie-list" v-for="(Item, index) in soonData.subjects" :key="index" @click="moviesDetail(Item)">
+          <div class="coming-movie-image">
             <img :src="Item.images.large" class="img-size"/>
           </div>
-          <div class="upcomingMovie-name">{{Item.title}}</div>
+          <div class="coming-movie-name">{{Item.title}}</div>
         </div>
       </div>
     </div>
     <!--新片榜的电影-->
-    <div class="newMovie">
-      <div class="newMovie-area">{{newData.title}}</div>
-      <div class="newMovie-item">
-        <div class="newMovie-list" v-for="(Item, index) in newData.subjects" :key="index" @click="moviesDetail(Item)">
-          <div class="newMovie-image">
+    <div class="new-movie">
+      <div class="new-movie-area">{{newData.title}}</div>
+      <div class="new-movie-item">
+        <div class="new-movie-list" v-for="(Item, index) in newData.subjects" :key="index" @click="moviesDetail(Item)">
+          <div class="new-movie-image">
             <img :src="Item.images.large" class="img-size"/>
           </div>
-          <div class="newMovie-name">{{Item.title}}</div>
+          <div class="new-movie-name">{{Item.title}}</div>
         </div>
       </div>
     </div>
     <!--top250-->
-    <div class="top250Movie">
+    <div class="top-movie">
       <div class="top250-area">{{topData.title}}</div>
       <div class="top250-item">
         <div class="top250-list" v-for="(Item, index) in topData.subjects" :key="index" @click="moviesDetail(Item)">
@@ -67,14 +67,12 @@ export default {
   },
   methods: {
     moviesDetail (Item) {
-      // console.log(Item.id, '拿到id')
       wx.navigateTo({
-        url: '/pages/detail/main?id=' + Item.id
+        url: '/pages/detail/main?data=' + JSON.stringify(Item)
       })
     },
     previewImage (i) {
       console.log(i)
-      // console.log(this.imgUrls);
       wx.previewImage({
         current: this.imgUrls[i], // 当前显示图片的http链接
         urls: this.imgUrls // 需要预览的图片http链接列表
@@ -87,7 +85,6 @@ export default {
     this.soonData = this.data.default.soonData[0]
     this.newData = this.data.default.newData[0]
     this.topData = this.data.default.topData[0]
-    // console.log(this.soonData, '数据')
   }
 }
 </script>
@@ -105,7 +102,7 @@ export default {
     width: 100%;
   }
   /*即将上映的电影*/
-  .upcomingMovie {
+  .coming-movie {
     width: 100%;
     box-sizing: border-box;
     border-bottom: 1px solid #f8f9fb;
@@ -114,14 +111,14 @@ export default {
     padding:10px 0;
 
   }
-  .upcomingMovie-item {
+  .coming-movie-item {
     width: 100%;
     display: flex;
     cursor: pointer;
     font-size: 20rpx;
     background-color: #fff;
   }
-  .upcomingMovie-area{
+  .coming-movie-area{
     width: 100%;
     height: 15px;
     line-height: 15px;
@@ -129,27 +126,27 @@ export default {
     font-size: 12px;
     font-weight: bold;
   }
-  .upcomingMovie-list{
+  .coming-movie-list{
     height: 180px;
     margin-right:5px;
     text-align: center;
   }
-  .upcomingMovie-image{
+  .coming-movie-image{
     width: 90px;
     height: 160px;
   }
-  .upcomingMovie-image .img-size{
+  .coming-movie-image .img-size{
     width: 100%;
     height: 160px;
   }
-  .upcomingMovie-name{
+  .coming-movie-name{
     width: 90px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
   /*新片榜的电影*/
-  .newMovie {
+  .new-movie {
     width: 100%;
     box-sizing: border-box;
     border-bottom: 1px solid #f8f9fb;
@@ -157,14 +154,14 @@ export default {
     overflow-y: auto;
     padding:10px 0;
   }
-  .newMovie-item {
+  .new-movie-item {
     width: 100%;
     display: flex;
     cursor: pointer;
     font-size: 20rpx;
     background-color: #fff;
   }
-  .newMovie-area{
+  .new-movie-area{
     width: 100%;
     height: 15px;
     line-height: 15px;
@@ -172,28 +169,28 @@ export default {
     font-size: 12px;
     font-weight: bold;
   }
-  .newMovie-list{
+  .new-movie-list{
     height: 180px;
     margin-right:5px;
     text-align: center;
   }
-  .newMovie-image{
+  .new-movie-image{
     width: 90px;
     height: 160px;
   }
-  .newMovie-image .img-size{
+  .new-movie-image .img-size{
     width: 100%;
     height: 160px;
   }
-  .newMovie-name{
+  .new-movie-name{
     width: 90px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
 
-  /*yop250的电影*/
-  .top250Movie {
+  /*top250的电影*/
+  .top-movie {
     width: 100%;
     box-sizing: border-box;
     border-bottom: 1px solid #f8f9fb;

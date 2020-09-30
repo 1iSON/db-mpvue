@@ -1,41 +1,29 @@
 <template>
-  <div v-if="isData">
-    <div class="detailPage">
-      <img :src="detailData.images.small" class="coverLargeImg"/>
-      <img :src="detailData.images.small" class="coverMiniImg"/>
-      <div class="filmName">{{detailData.original_title}}(<span>{{detailData.year}}</span>)</div>
-      <div class="filmInfo">
+  <div>
+    <div class="detail-page">
+      <img :src="detailData.images.small" class="large-img"/>
+      <img :src="detailData.images.small" class="mini-img"/>
+      <div class="film-name">{{detailData.title}}</div>
+      <div class="film-info">
         <span class="l-text">评分：</span>
         <div class="r-text">
-          <span class="mar-10">{{detailData.rating.average}}</span>
+          <span class="mar-10">{{detailData.average}}</span>
         </div>
       </div>
-      <div class="filmInfo">
+      <div class="film-info">
         <span class="l-text">导演：</span>
         <div class="r-text">
-          <span class="mar-10">{{detailData.directors[0].name}}</span>
+          <span class="mar-10">{{detailData.director}}</span>
         </div>
-      </div>
-      <div class="filmInfo">
-        <span class="l-text">主演：</span>
-        <div class="r-text">
-          <span class="mar-10" v-for="(item,index) in detailData.casts" :key="index">{{item.name}}</span>
-        </div>
-      </div>
-      <div class="summaryInfos">
-        <span class="summaryTitle">摘要:</span>
-        <span class="summaryText">{{detailData.summary}}</span>
       </div>
     </div>
   </div>
 </template>
 <script>
-import { detail } from '../../http/api'
+// import { detail } from '../../http/api'
 export default {
   data () {
     return {
-      id: '',
-      isData: false,
       detailData: ''
     }
   },
@@ -44,35 +32,32 @@ export default {
   methods: {
   },
   onShow () {
-    this.isData = false
-    detail(this.id).then((res) => {
-      if (res) {
-        // console.log(res, 'res')
-        if (res && res !== '') {
-          this.isData = true
-          this.detailData = res
-        }
-      }
-    })
+    // detail(this.id).then((res) => {
+    //   if (res) {
+    //     // console.log(res, 'res')
+    //     if (res && res !== '') {
+    //       this.isData = true
+    //       this.detailData = res
+    //     }
+    //   }
+    // })
   },
   onUnload () {
     // console.log('这里是卸载页面了')
   },
   onLoad (options) {
-    // console.log(options)
-    this.id = options.id
+    this.detailData = JSON.parse(options.data)
   },
   created () {
   }
 }
 </script>
 <style scoped>
-/* detailPage */
-.detailPage{
+.detail-page{
   padding:0 10%;
   margin:20px 0;
 }
-.coverLargeImg{
+.large-img{
   position:fixed;
   left:0;
   top:0;
@@ -83,47 +68,30 @@ export default {
   z-index:-1000;
   opacity:.1;
 }
-.coverMiniImg{
+.mini-img{
   width: 100%;
   height: 383px;
 }
-.filmName{
+.film-name{
   text-align: center;
-  margin: 5px 0;
+  margin: 20px 0;
   color: #232323;
   font-weight: 600;
 }
-.filmInfo{
+.film-info{
   font-size: 14px;
   color: #888;
   display: flex;
 }
-.filmInfo .l-text{
+.film-info .l-text{
   width: 45px;
   display: inline-block;
   text-align: left;
 }
-.filmInfo .r-text{
+.film-info .r-text{
   flex: 1
 }
-.filmInfo .mar-10{
+.film-info .mar-10{
   margin-right: 10px;
-}
-/* summaryInfos */
-.summaryInfos{
-  margin-top: 15px;
-}
-.summaryInfos .summaryTitle{
-  font-size: 18px;
-  color: #232323;
-  display: block;
-  font-weight: bold;
-}
-.summaryInfos .summaryText{
-  height: 25px;
-  line-height: 25px;
-  font-size: 14px;
-  color: #666;
-  text-indent: 2em!important;
 }
 </style>
