@@ -35,7 +35,7 @@ export default {
       logs = mpvue.getStorageSync('logs') || []
     }
     this.logs = logs.map(log => formatTime(new Date(log)))
-    // console.log(this.logs, 'this.logs')
+    console.log(this.logs, 'this.logs')
   }
 }
 </script>
