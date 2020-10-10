@@ -63,8 +63,7 @@ export default {
       topData: []
     }
   },
-  components: {
-  },
+  components: {},
   methods: {
     moviesDetail (Item) {
       wx.navigateTo({
@@ -72,15 +71,13 @@ export default {
       })
     },
     previewImage (i) {
-      console.log(i)
       wx.previewImage({
         current: this.imgUrls[i], // 当前显示图片的http链接
         urls: this.imgUrls // 需要预览的图片http链接列表
       })
     }
   },
-  created () {
-  },
+  created () {},
   mounted () {
     this.soonData = this.data.default.soonData[0]
     this.newData = this.data.default.newData[0]
@@ -89,147 +86,146 @@ export default {
 }
 </script>
 <style scoped>
-  /* 去除首页x轴滚动条 */
-  ::-webkit-scrollbar{
-    display:none;
-  }
-  /* 轮播图 */
-  .slide swiper {
-    height: 480rpx;
-  }
-  .slide swiper image {
-    height: 100%;
-    width: 100%;
-  }
-  /*即将上映的电影*/
-  .coming-movie {
-    width: 100%;
-    box-sizing: border-box;
-    border-bottom: 1px solid #f8f9fb;
-    overflow-x: auto;
-    overflow-y: auto;
-    padding:10px 0;
+/* 去除首页x轴滚动条 */
+::-webkit-scrollbar {
+  display: none;
+}
+/* 轮播图 */
+.slide swiper {
+  height: 480rpx;
+}
+.slide swiper image {
+  height: 100%;
+  width: 100%;
+}
+/*即将上映的电影*/
+.coming-movie {
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f8f9fb;
+  overflow-x: auto;
+  overflow-y: auto;
+  padding: 10px 0;
+}
+.coming-movie-item {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  font-size: 20rpx;
+  background-color: #fff;
+}
+.coming-movie-area {
+  width: 100%;
+  height: 15px;
+  line-height: 15px;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.coming-movie-list {
+  height: 180px;
+  margin-right: 5px;
+  text-align: center;
+}
+.coming-movie-image {
+  width: 90px;
+  height: 160px;
+}
+.coming-movie-image .img-size {
+  width: 100%;
+  height: 160px;
+}
+.coming-movie-name {
+  width: 90px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/*新片榜的电影*/
+.new-movie {
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f8f9fb;
+  overflow-x: auto;
+  overflow-y: auto;
+  padding: 10px 0;
+}
+.new-movie-item {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  font-size: 20rpx;
+  background-color: #fff;
+}
+.new-movie-area {
+  width: 100%;
+  height: 15px;
+  line-height: 15px;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.new-movie-list {
+  height: 180px;
+  margin-right: 5px;
+  text-align: center;
+}
+.new-movie-image {
+  width: 90px;
+  height: 160px;
+}
+.new-movie-image .img-size {
+  width: 100%;
+  height: 160px;
+}
+.new-movie-name {
+  width: 90px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 
-  }
-  .coming-movie-item {
-    width: 100%;
-    display: flex;
-    cursor: pointer;
-    font-size: 20rpx;
-    background-color: #fff;
-  }
-  .coming-movie-area{
-    width: 100%;
-    height: 15px;
-    line-height: 15px;
-    padding: 10px;
-    font-size: 12px;
-    font-weight: bold;
-  }
-  .coming-movie-list{
-    height: 180px;
-    margin-right:5px;
-    text-align: center;
-  }
-  .coming-movie-image{
-    width: 90px;
-    height: 160px;
-  }
-  .coming-movie-image .img-size{
-    width: 100%;
-    height: 160px;
-  }
-  .coming-movie-name{
-    width: 90px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  /*新片榜的电影*/
-  .new-movie {
-    width: 100%;
-    box-sizing: border-box;
-    border-bottom: 1px solid #f8f9fb;
-    overflow-x: auto;
-    overflow-y: auto;
-    padding:10px 0;
-  }
-  .new-movie-item {
-    width: 100%;
-    display: flex;
-    cursor: pointer;
-    font-size: 20rpx;
-    background-color: #fff;
-  }
-  .new-movie-area{
-    width: 100%;
-    height: 15px;
-    line-height: 15px;
-    padding: 10px;
-    font-size: 12px;
-    font-weight: bold;
-  }
-  .new-movie-list{
-    height: 180px;
-    margin-right:5px;
-    text-align: center;
-  }
-  .new-movie-image{
-    width: 90px;
-    height: 160px;
-  }
-  .new-movie-image .img-size{
-    width: 100%;
-    height: 160px;
-  }
-  .new-movie-name{
-    width: 90px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-
-  /*top250的电影*/
-  .top-movie {
-    width: 100%;
-    box-sizing: border-box;
-    border-bottom: 1px solid #f8f9fb;
-    overflow-x: auto;
-    overflow-y: auto;
-    padding:10px 0;
-  }
-  .top250-item {
-    width: 100%;
-    display: flex;
-    cursor: pointer;
-    font-size: 20rpx;
-    background-color: #fff;
-  }
-  .top250-area{
-    width: 100%;
-    height: 15px;
-    line-height: 15px;
-    padding: 10px;
-    font-size: 12px;
-    font-weight: bold;
-  }
-  .top250-list{
-    height: 180px;
-    margin-right:5px;
-    text-align: center;
-  }
-  .top250-image{
-    width: 90px;
-    height: 160px;
-  }
-  .top250-image .img-size{
-    width: 100%;
-    height: 160px;
-  }
-  .top250-name{
-    width: 90px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
+/*top250的电影*/
+.top-movie {
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f8f9fb;
+  overflow-x: auto;
+  overflow-y: auto;
+  padding: 10px 0;
+}
+.top250-item {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  font-size: 20rpx;
+  background-color: #fff;
+}
+.top250-area {
+  width: 100%;
+  height: 15px;
+  line-height: 15px;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.top250-list {
+  height: 180px;
+  margin-right: 5px;
+  text-align: center;
+}
+.top250-image {
+  width: 90px;
+  height: 160px;
+}
+.top250-image .img-size {
+  width: 100%;
+  height: 160px;
+}
+.top250-name {
+  width: 90px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 </style>
