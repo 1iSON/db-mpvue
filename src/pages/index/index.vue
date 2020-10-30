@@ -1,7 +1,8 @@
 <template>
   <div>
+    <!-- 猪脚饭看电影 -->
     <!--轮播图-->
-    <div class="slide">
+    <div class="slide-bg">
       <swiper>
         <block v-for="(item, index) in imgUrls" :key="index" >
           <swiper-item>
@@ -10,7 +11,7 @@
         </block>
       </swiper>
     </div>
-    <!--即将上映的电影-->
+    <!--即将上映的电影11-->
     <div class="coming-movie">
       <div class="coming-movie-area">{{soonData.title}}</div>
       <div class="coming-movie-item">
@@ -18,6 +19,7 @@
           <div class="coming-movie-image">
             <img :src="Item.images.large" class="img-size"/>
           </div>
+          <!-- 猪脚饭电影 -->
           <div class="coming-movie-name">{{Item.title}}</div>
         </div>
       </div>
@@ -34,7 +36,7 @@
         </div>
       </div>
     </div>
-    <!--top250-->
+    <!--top250--><!-- 猪脚饭看电影 -->
     <div class="top-movie">
       <div class="top250-area">{{topData.title}}</div>
       <div class="top250-item">
@@ -91,10 +93,10 @@ export default {
   display: none;
 }
 /* 轮播图 */
-.slide swiper {
+.slide-bg swiper {
   height: 480rpx;
 }
-.slide swiper image {
+.slide-bg swiper image {
   height: 100%;
   width: 100%;
 }
