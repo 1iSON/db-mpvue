@@ -41,7 +41,6 @@ export default {
     // })
   },
   onUnload () {
-    // console.log('这里是卸载页面了')
   },
   onLoad (options) {
     this.detailData = JSON.parse(options.data)

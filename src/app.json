@@ -2,8 +2,7 @@
   "pages": [
     "pages/index/main",
     "pages/logs/main",
-    "pages/detail/main",
-    "pages/me/main"
+    "pages/detail/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -24,7 +23,7 @@
       "selectedIconPath": "static/icons/home-active.png"
     },
     {
-      "text": "我的",
+      "text": "日志",
       "pagePath": "pages/logs/main",
       "iconPath": "static/icons/orders.png",
       "selectedIconPath": "static/icons/orders-active.png"
@@ -37,7 +36,7 @@
       "activeIcon": "static/icons/home-active.png"
     },
     {
-      "name": "我的",
+      "name": "日志",
       "pagePath": "pages/logs/main",
       "icon": "static/icons/orders.png",
       "activeIcon": "static/icons/orders-active.png"

@@ -1,7 +1,5 @@
 <template>
   <div>
-    <!-- 猪脚饭看电影 -->
-    <!--轮播图-->
     <div class="slide-bg">
       <swiper>
         <block v-for="(item, index) in imgUrls" :key="index" >
@@ -11,7 +9,6 @@
         </block>
       </swiper>
     </div>
-    <!--即将上映的电影11-->
     <div class="coming-movie">
       <div class="coming-movie-area">{{soonData.title}}</div>
       <div class="coming-movie-item">
@@ -19,12 +16,10 @@
           <div class="coming-movie-image">
             <img :src="Item.images.large" class="img-size"/>
           </div>
-          <!-- 猪脚饭电影 -->
           <div class="coming-movie-name">{{Item.title}}</div>
         </div>
       </div>
     </div>
-    <!--新片榜的电影-->
     <div class="new-movie">
       <div class="new-movie-area">{{newData.title}}</div>
       <div class="new-movie-item">
@@ -36,7 +31,6 @@
         </div>
       </div>
     </div>
-    <!--top250--><!-- 猪脚饭看电影 -->
     <div class="top-movie">
       <div class="top250-area">{{topData.title}}</div>
       <div class="top250-item">
@@ -74,9 +68,15 @@ export default {
     },
     previewImage (i) {
       wx.previewImage({
-        current: this.imgUrls[i], // 当前显示图片的http链接
-        urls: this.imgUrls // 需要预览的图片http链接列表
+        current: this.imgUrls[i],
+        urls: this.imgUrls
       })
+    }
+  },
+  onShareAppMessage () {
+    return {
+      title: '看电影么？算我一个！',
+      path: '/pages/index/main'
     }
   },
   created () {},
@@ -88,11 +88,9 @@ export default {
 }
 </script>
 <style scoped>
-/* 去除首页x轴滚动条 */
 ::-webkit-scrollbar {
   display: none;
 }
-/* 轮播图 */
 .slide-bg swiper {
   height: 480rpx;
 }
@@ -100,7 +98,6 @@ export default {
   height: 100%;
   width: 100%;
 }
-/*即将上映的电影*/
 .coming-movie {
   width: 100%;
   box-sizing: border-box;
@@ -143,7 +140,6 @@ export default {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-/*新片榜的电影*/
 .new-movie {
   width: 100%;
   box-sizing: border-box;
@@ -187,7 +183,6 @@ export default {
   text-overflow: ellipsis;
 }
 
-/*top250的电影*/
 .top-movie {
   width: 100%;
   box-sizing: border-box;
