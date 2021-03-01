@@ -1,0 +1,40 @@
+.index-page {
+    background: #fff;
+    margin: 0 36rpx;
+
+    .input {
+        border: 1rpx solid #bfbfbf;
+        padding-left: 20rpx;
+    }
+
+    .list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 15rpx 0;
+        border: 1rpx solid #eee;
+
+        view {
+            p {
+                width: 450rpx;
+                display: flex;
+                span {
+                    width: 350rpx;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    width: 350rpx;
+                    color: #333333;
+                    font-size: 28rpx;
+                }
+            }
+        }
+
+        image {
+            width: 200rpx !important;
+            height: 200rpx !important;
+        }
+    }
+}

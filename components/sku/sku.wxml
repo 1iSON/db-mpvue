@@ -1,0 +1,19 @@
+<view class='lists_box' wx:for="{{ resultData }}" wx:for-item="items" wx:for-index="idx" wx:key="key" data-item="{{items}}" data-index="{{index}}">
+    <view class='lists_t'>
+        {{ items.school_name}}
+        <view class='see_more' data-item="{{items}}" catchtap="schoolDetails">
+            更多详细信息
+            <image class='more_img2' src='../../states/images/icons/right_arrow2.png' mode='aspectFill'></image>
+        </view>
+    </view>
+    <view class='lists_l'>
+        <view class='l_nav'>
+            <view class="navs {{items.tabIndex == index ? 'active': ' '}}" wx:for="{{items.child}}" wx:for-item="item" wx:for-index="index" wx:key="key" data-item="{{item}}" data-idx="{{idx}}" data-index="{{index}}"
+                catchtap='change'>{{item.college}}</view>
+        </view>
+        <view class='l_choose' wx:for="{{ items.child[items.tabIndex].profession }}" wx:for-item="item" wx:for-index="index" wx:key="key" data-item="{{item}}" data-index="{{index}}" catchtap="goDetails">
+            {{ item.name }}
+            <image class='more_img1' src='../../states/images/icons/right_arrow1.png' mode='aspectFill'></image>
+        </view>
+    </view>
+</view>

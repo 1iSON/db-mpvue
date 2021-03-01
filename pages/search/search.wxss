@@ -1,0 +1,4 @@
+.search-page {
+  background: #fff;
+  margin: 0 36rpx;
+}

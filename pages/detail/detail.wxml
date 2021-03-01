@@ -1,0 +1,18 @@
+<view class='detail-page'>
+    <view><image src='{{list.photo_path}}' mode='widthFix'></image></view>
+    <view><span>菜名：</span><p>{{list.title}}</p></view>
+    <view><span>作者：</span><p>{{list.author || 'Blues'}}</p></view>
+    <view><span>烹饪时间：</span><p>{{list.cook_time || '暂无'}}</p></view>
+    <view><span>难度等级：</span><p>{{list.cook_difficulty || '暂无'}}</p></view>
+    <view><span>阅读量：</span><p>{{list.favo_counts_text || '暂无'}}</p></view>
+    <view><span>创建时间：</span><p>{{list.create_time || '暂无'}}</p></view>
+    <view><span>发布时间：</span><p>{{list.release_time || '暂无'}}</p></view>
+    <view><span>喜欢的人：</span><p>{{list.recommend_label || '暂无'}}</p></view>
+    <view><span>评分：</span><p>{{list.rate}}</p></view>
+    <view>
+        <span>原材料：</span>
+        <p>
+            <span class="last-span" wx:for="{{list.major}}" wx:key="item" wx:for-item="item">{{item.title}}+{{item.note}}</span>
+        </p>
+    </view>
+</view>

@@ -1,0 +1,29 @@
+.detail-page {
+  background: #fff;
+  margin: 0 36rpx;
+  padding-bottom: 50rpx;
+}
+.detail-page view {
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: bold;
+  margin: 20rpx 0;
+  display: flex;
+  align-items: center;
+}
+.detail-page view image {
+  width: 100%;
+}
+.detail-page view span {
+  width: 180rpx;
+  display: inline-block;
+  text-align: left;
+}
+.detail-page view p {
+  font-size: 26rpx;
+  font-weight: normal;
+  flex: 1;
+}
+.detail-page view p .last-span {
+  width: auto;
+}

@@ -1,0 +1,38 @@
+{
+    "pages":[
+        "pages/home/home",
+        "pages/logs/logs",
+        "pages/detail/detail"
+    ],
+    "window":{
+        "navigationBarBackgroundColor": "#000",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "肥肥来了",
+        "backgroundColor": "#fff",
+        "backgroundTextStyle": "light"
+    },
+    "usingComponents": {
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "color": "#bfbfbf",
+        "selectedColor": "#1296db",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "list": [
+        {
+            "pagePath": "pages/home/home",
+            "iconPath": "./states/images/icons/home.png",
+            "selectedIconPath": "./states/images/icons/home-on.png",
+            "text": "首页"
+        },
+        {
+            "pagePath": "pages/logs/logs",
+            "iconPath": "./states/images/icons/logs.png",
+            "selectedIconPath": "./states/images/icons/logs-on.png",
+            "text": "我的"
+        }
+        ]
+    }
+}

@@ -1,32 +1,316 @@
 {
-    "description": "项目配置文件。",
-    "setting": {
-        "urlCheck": true,
-        "es6": false,
-        "postcss": true,
-        "minified": true,
-        "newFeature": true
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
     },
-    "miniprogramRoot": "dist/wx/",
-    "compileType": "miniprogram",
-    "appid": "touristappid",
-    "projectname": "db-films",
-    "condition": {
-        "search": {
-            "current": -1,
-            "list": []
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.12.2",
+  "appid": "wx64eb65cfc1244f19",
+  "projectname": "Choose",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/pipei/pipei",
+          "pathName": "pages/pipei/pipei",
+          "query": "",
+          "scene": null
         },
-        "conversation": {
-            "current": -1,
-            "list": []
+        {
+          "id": -1,
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
         },
-        "game": {
-            "currentL": -1,
-            "list": []
+        {
+          "id": -1,
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
         },
-        "miniprogram": {
-            "current": -1,
-            "list": []
+        {
+          "id": 3,
+          "name": "pages/lookWordChoice/lookWordChoice",
+          "pathName": "pages/lookWordChoice/lookWordChoice",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/listenEnglish/listenEnglish",
+          "pathName": "pages/listenEnglish/listenEnglish",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/lookReadEnglish/lookReadEnglish",
+          "pathName": "pages/lookReadEnglish/lookReadEnglish",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/finishLearn/finishLearn",
+          "pathName": "pages/finishLearn/finishLearn",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/fourCardChoice/fourCardChoice",
+          "pathName": "pages/fourCardChoice/fourCardChoice",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/voiceFourToOne/voiceFourToOne",
+          "pathName": "pages/voiceFourToOne/voiceFourToOne",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 10,
+          "name": "pages/chooseLetterToWord/chooseLetterToWord",
+          "pathName": "pages/chooseLetterToWord/chooseLetterToWord",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 10,
+          "name": "pages/throughSuccess/throughSuccess",
+          "pathName": "pages/finishLearn/finishLearn",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 11,
+          "name": "pages/stars/stars",
+          "pathName": "pages/stars/stars",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/choiceTheme/choiceTheme",
+          "pathName": "pages/choiceTheme/choiceTheme",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/testPage/testPage",
+          "pathName": "pages/testPage/testPage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/modalPage/modalPage",
+          "pathName": "pages/modalPage/modalPage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 16,
+          "name": "pages/successPage/successPage",
+          "pathName": "pages/successPage/successPage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 16,
+          "name": "pages/userFighting/userFighting",
+          "pathName": "pages/userFighting/userFighting",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "火箭飞行动画组件",
+          "pathName": "pages/flying/flying",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/flying/flying",
+          "pathName": "components/flying/flying",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "火箭飞行动画组件",
+          "pathName": "components/flying/flying",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/testPageTwo/testPageTwo",
+          "pathName": "pages/testPageTwo/testPageTwo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/clockIn/clockIn",
+          "pathName": "pages/clockIn/clockIn",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/search/search",
+          "pathName": "pages/search/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/detail/detail",
+          "pathName": "pages/detail/detail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/schoolDesc/schoolDesc",
+          "pathName": "pages/schoolDesc/schoolDesc",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/proDesc/proDesc",
+          "pathName": "pages/proDesc/proDesc",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/chatBot/chatBot",
+          "pathName": "pages/chatBot/chatBot",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/fangan/fangan",
+          "pathName": "pages/fangan/fangan",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/noFangan/noFangan",
+          "pathName": "pages/noFangan/noFangan",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/ziliaobao/ziliaobao",
+          "pathName": "pages/ziliaobao/ziliaobao",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/scheme/scheme",
+          "pathName": "pages/scheme/scheme",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/break/break",
+          "pathName": "pages/break/break",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/dataPack/dataPack",
+          "pathName": "pages/dataPack/dataPack",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/evaluating/evaluating",
+          "pathName": "pages/evaluating/evaluating",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mapping/mapping",
+          "pathName": "pages/mapping/mapping",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/scheme/scheme",
+          "pathName": "pages/scheme/scheme",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/specialty/specialty",
+          "pathName": "pages/specialty/specialty",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/dataPack/dataPack",
+          "pathName": "pages/dataPack/dataPack",
+          "scene": null
         }
+      ]
     }
+  }
 }

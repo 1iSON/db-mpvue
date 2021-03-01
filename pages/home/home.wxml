@@ -1,0 +1,15 @@
+<view class='index-page'>
+	<input class="input" style="height:80rpx;line-height:80rpx" bindinput="bindValue" value="{{value}}" maxlength="15" placeholder="请输入您想吃的东西"/>
+    <view wx:if="{{!isShit}}" class="list" bindtap="goDetail" wx:for="{{list}}" wx:key="item" wx:for-item="item" data-id="{{item.r.id}}">
+        <view>
+            <p>名称：<span>{{item.r.n}}</span></p>
+            <p>耗时：<span>{{item.r.cook_time || '暂无'}}</span></p>
+            <p>评价：<span>{{item.r.cookstory || '暂无'}}</span></p>
+            <p>分数：<span>{{item.r.rate || '暂无'}}</span></p>
+        </view>
+        <image src='{{item.r.img}}' mode='widthFix'></image>
+    </view>
+    <view wx:if="{{isShit}}">
+        <image style="width:100%; margin:100rpx auto;" src='../../states/images/shit.jpg' mode='widthFix'></image>
+    </view>
+</view>
